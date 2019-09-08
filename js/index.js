@@ -15,7 +15,6 @@ logo.addEventListener('mouseleave', event => {
 
 // #3
 let navItems = document.querySelectorAll('.nav-link');
-console.log(navItems);
 let arr = Array.from(navItems);
 arr.map( item => {
   item.addEventListener('click', event => {
@@ -47,10 +46,8 @@ window.addEventListener('load', (e) => {
 })
 
 // #8
-arr.forEach( button => {
-  button.addEventListener('focus', (e) => {
-    e.target.remove()
-  })
+navItems[0].addEventListener('focus', event => {
+  event.target.remove();
 })
 
 // #9
@@ -64,7 +61,6 @@ window.addEventListener('resize', (e) => {
 
 // #10
 let destText = document.querySelectorAll('.destination p');
-console.log(destText)
 destText.forEach( dest => {
   dest.addEventListener('drag', event => {
     event.target.remove(dest);
