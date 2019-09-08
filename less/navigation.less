@@ -33,12 +33,33 @@
         justify-content: space-around;
       }
       
+      .active {
+        color: rgba(236, 91, 91, 0.6);
+        transition: color 0.3s ease-in-out;
+      }
+
+      .nav-link::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 0;
+        background: rgba(236, 91, 91, 0.8);
+        transition: width 0.2s ease-in-out;
+      }
+      
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      
+      
+      
       
       a {
         font-size: 1.6rem;
         color: @font-color;
         text-decoration: none;
-      }
+      } 
     }
   }
 } // .main-navigation

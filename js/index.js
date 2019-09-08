@@ -70,3 +70,16 @@ destText.forEach( dest => {
     event.target.remove(dest);
   })
 })
+
+// greensock animationPlayState: 
+
+arr.map( nav => {
+  nav.addEventListener('mouseover', event => {
+    // event.target.style.borderBottom = '1px solid #999';
+    event.target.classList.add('active');
+  })
+
+  nav.addEventListener('mouseleave', event => {
+    event.target.classList.remove('active');
+  })
+})
